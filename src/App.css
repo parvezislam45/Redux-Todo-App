@@ -1,38 +1,70 @@
-.App {
+
+.table-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  margin-top: 50px;
+}
+
+.custom-table {
+  width: 90%; /* Custom width */
+  max-width: 60%; /* Max width */
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle; /* Aligns the content vertically in the middle */
+}
+
+.custom-table th {
+  background-color: #f2f2f2;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.task-item {
+  background-color: #fff; /* Set background color for all table rows */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.task-item.completed {
+  background-color: #f0f0f0; /* Optionally different color for completed tasks */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.task-content {
+  text-align: center; /* Aligns task content to the center */
+}
+
+.action-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end; /* Aligns action buttons to the end */
+  align-items: center; /* Centers action buttons vertically */
 }
 
-.App-link {
-  color: #61dafb;
+.button-group {
+  display: flex;
+  gap: 5px;
+  justify-content: center; /* Centers buttons horizontally within their container */
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+  margin: 0;
+}
+
+.task-item.completed span {
+  text-decoration: line-through;
+  color: black;
+}
+
+.task-item span {
+  margin: 0;
+  font-size: 1em;
+}
+h1{
+  text-align: center;
+  margin-top: 30px;
 }
